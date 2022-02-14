@@ -68,7 +68,7 @@ describe HostedVideo do
     let(:parser) { subject.from_url('//www.youtube.com/embed/MT4oShGnFuw?wmode=transparent') }
 
     it 'successfully determines' do
-      parser.kind.should == 'youtubebyiframe'
+      parser.kind.should == 'youtube'
     end
 
     it 'gets right video id' do
@@ -124,7 +124,7 @@ describe HostedVideo do
     let(:parser) { subject.from_url('//player.vimeo.com/video/33481092') }
 
     it 'successfully determines' do
-      parser.kind.should == 'vimeobyiframe'
+      parser.kind.should == 'vimeo'
     end
 
     it 'gets right video id' do
@@ -185,7 +185,7 @@ describe HostedVideo do
     let(:parser) { subject.from_url('https://rutube.ru/video/embed/94867125d81559df05cbcd3713a67c78') }
 
     it 'successfully determines' do
-      parser.kind.should == 'rutubebyiframe'
+      parser.kind.should == 'rutube'
     end
 
     it 'gets right video id' do
