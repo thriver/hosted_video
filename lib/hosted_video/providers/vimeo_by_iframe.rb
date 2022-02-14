@@ -5,6 +5,10 @@ module HostedVideo
         url =~ /player\.vimeo\.com\/video\/\d{7,8}.*/
       end
 
+      def kind
+        'vimeo'
+      end
+
       private
 
       def vid_regex

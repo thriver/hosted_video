@@ -5,6 +5,10 @@ module HostedVideo
         url =~ /rutube\.ru\/video\/embed\/(\w{32}|\w{7}).*/
       end
 
+      def kind
+        'rutube'
+      end
+
       private
 
       def vid_regex

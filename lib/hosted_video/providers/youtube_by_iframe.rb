@@ -5,6 +5,10 @@ module HostedVideo
         url =~ /youtube\.com\/embed\/[\w,-]{11}(\?.*)?/
       end
 
+      def kind
+        'youtube'
+      end
+
       private
 
       def vid_regex
