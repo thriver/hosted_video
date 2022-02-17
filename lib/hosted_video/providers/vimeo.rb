@@ -2,7 +2,7 @@ module HostedVideo
   module Providers
     class Vimeo < Base
       def self.can_parse?(url)
-        url =~ /vimeo\.com\/\d{7,8}.*/
+        url =~ /vimeo\.com\/\d{5,}.*/
       end
 
       def preview
@@ -16,7 +16,7 @@ module HostedVideo
       private
 
       def vid_regex
-        /(https?:\/\/)?(www\.)?vimeo\.com\/(?<id>\d{7,8}).*/
+        /(https?:\/\/)?(www\.)?vimeo\.com\/(?<id>\d{5,}).*/
       end
     end
   end

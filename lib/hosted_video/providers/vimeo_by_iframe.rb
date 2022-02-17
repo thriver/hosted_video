@@ -2,7 +2,7 @@ module HostedVideo
   module Providers
     class VimeoByIframe < Vimeo
       def self.can_parse?(url)
-        url =~ /player\.vimeo\.com\/video\/\d{7,8}.*/
+        url =~ /player\.vimeo\.com\/video\/\d{5,}.*/
       end
 
       def kind
@@ -12,7 +12,7 @@ module HostedVideo
       private
 
       def vid_regex
-        /player\.vimeo\.com\/video\/(?<id>\d{7,8}).*/
+        /player\.vimeo\.com\/video\/(?<id>\d{5,}).*/
       end
     end
   end
